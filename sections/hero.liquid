@@ -1,0 +1,33 @@
+<div class="block block--hero">
+  <div class="hero__content">
+    <div class="hero__text">
+      <h1 class="hero__title">
+        The freshest </span class="break hide-on-mobile"> pesto you </span class="break hide-on-mobile"> can buy
+      </h1>
+      <p class="hero__description">
+        We stone grind basil grown on our farm with olive oil, sea salt, and garlic to create a wonderfully fresh pesto. And yes, it's nut and dairy free too!
+      </p>
+      <button class="button hero__cta" data-modal-open="waitlist-modal">Join our waitlist!</button>
+    </div>
+    <div class="hero__image-wrapper">
+      <img src="{{ 'food-photo.jpg' | asset_url }}" class="hero__image" alt="Fresh pesto as part of an italian meal"/>
+    </div>
+  </div>
+  <div class="divider">
+    <hr />
+    <hr />
+  </div>
+</div>
+
+{% render 'modal' %}
+
+{% schema %}
+{
+  "name": "Hero",
+  "presets": [
+    {
+      "name": "Hero"
+    }
+  ]
+}
+{% endschema %} 

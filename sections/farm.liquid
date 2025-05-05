@@ -1,0 +1,26 @@
+<div class="block block--dark-green block--reverse" id="our-farm">
+  <div class="block__text">
+    <h2 class="block__headline">
+      Our farm
+    </h2>
+    <p>
+      All of our pesto is made from basil grown on our farm outside Mountain Grove, Missouri. We harvest our basil leaves at peak flavor, and we grind them onsite within a few hours.
+    </p>
+  </div>
+  <img src="{{ 'farm-image.png' | asset_url }}" class="block__image" alt="Overhead view of our farm fields and garden beds"/>
+  <div class="divider">
+    <hr />
+    <hr />
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Farm",
+  "presets": [
+    {
+      "name": "Farm"
+    }
+  ]
+}
+{% endschema %} 

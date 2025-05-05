@@ -1,0 +1,50 @@
+[
+  {
+    "name": "theme_info",
+    "theme_name": "Pesto For All",
+    "theme_version": "1.0.0",
+    "theme_author": "Pesto For All",
+    "theme_support_email": "hello@pestoforall.co",
+    "theme_documentation_url": "https://pestoforall.co"
+  },
+  {
+    "name": "Colors",
+    "settings": [
+      {
+        "type": "color",
+        "id": "color_text",
+        "label": "Text color",
+        "default": "#4A5A2A"
+      },
+      {
+        "type": "color",
+        "id": "color_green_dark",
+        "label": "Dark green",
+        "default": "#2C5A2E"
+      },
+      {
+        "type": "color",
+        "id": "color_green_light",
+        "label": "Light green",
+        "default": "#A5C76B"
+      },
+      {
+        "type": "color",
+        "id": "color_yellow",
+        "label": "Yellow",
+        "default": "#FFFFCC"
+      }
+    ]
+  },
+  {
+    "name": "Social Media",
+    "settings": [
+      {
+        "type": "text",
+        "id": "instagram_username",
+        "label": "Instagram username",
+        "default": "pesto_for_all"
+      }
+    ]
+  }
+] 

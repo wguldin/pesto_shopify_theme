@@ -1,0 +1,27 @@
+<div class="block block--green block--instagram">
+  <div class="block__text">
+    <h2 class="block__headline">Follow us on Instagram</h2>
+    <p>See what's growing on our farm and get a behind-the-scenes look at our pesto-making process.</p>
+    <a href="https://www.instagram.com/{{ settings.instagram_username }}/" class="button" target="_blank" rel="noopener">@{{ settings.instagram_username }}</a>
+  </div>
+  <div class="instagram-feed">
+    <!-- Instagram feed will be loaded here via JavaScript -->
+    <div class="instagram-feed__placeholder">
+      <p>Loading Instagram feed...</p>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Instagram Feed",
+  "tag": "section",
+  "class": "section",
+  "settings": [],
+  "presets": [
+    {
+      "name": "Instagram Feed"
+    }
+  ]
+}
+{% endschema %} 
