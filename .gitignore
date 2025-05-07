@@ -6,3 +6,4 @@ dist
 .cache
 .DS_Store
 shopify-theme.zip
+.shopify

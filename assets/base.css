@@ -1,4 +1,13 @@
 /* Base styles */
+@font-face {
+  font-family: 'Recoleta';
+  src: url('recoleta-semibold-webfont.woff2') format('woff2'),
+       url('recoleta-semibold-webfont.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --color-text: hsl(80, 48%, 18%);
   --color-text--light: hsl(70, 9%, 40%);
