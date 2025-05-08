@@ -158,21 +158,6 @@ main:focus {
   margin: 1rem 0 0 0;
 }
 
-/* Instagram feed */
-.instagram-feed {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1rem;
-  margin-top: 2rem;
-}
-
-.instagram-feed__placeholder {
-  text-align: center;
-  padding: 2rem;
-  background-color: var(--color--light-green--bg);
-  border-radius: 0.5rem;
-}
-
 /* Responsive styles */
 @media (max-width: 70rem) {
   body {

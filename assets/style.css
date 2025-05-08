@@ -349,14 +349,6 @@
     font-size: 1em;
     padding: 1em 0.5em;
   }
-  .instagram-feed {
-    grid-template-columns: 1fr;
-    gap: 0.5em;
-    margin-top: 1em;
-  }
-  .instagram-feed__placeholder {
-    padding: 1em;
-  }
   .divider {
     margin: 1.5em 0;
   }
@@ -376,6 +368,18 @@
   .block {
     padding: 3em 3em 0 3em;
   }
+}
+
+.block--instagram .block__image {
+  border: 0 !important;
+  box-shadow: none !important;
+  margin: 4.5em 0 0 !important;
+  align-self: baseline !important;
+  grid-column: 2 / span 5 !important;
+}
+
+.block--instagram .block__text {
+  grid-column: 8 / span 5;
 }
 
 .fancy-link {
