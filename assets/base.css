@@ -147,8 +147,19 @@ main:focus {
 }
 
 .newsletter-form__message--success {
-  background-color: var(--color-green--light);
-  color: var(--color-text);
+  color: var(--color-green--dark);
+  font-size: 1.1rem;
+  line-height: 1.5;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.newsletter-form__message--success svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-right: 0.5rem;
+  vertical-align: middle;
+  color: var(--color-green--dark);
 }
 
 .newsletter-form__button {

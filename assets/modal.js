@@ -5,6 +5,16 @@ class Modal {
     this.container = this.modal.querySelector('.modal__container');
     this.closeButtons = this.modal.querySelectorAll('[data-modal-close]');
     this.openButtons = document.querySelectorAll(`[data-modal-open="${modalId}"]`);
+    this.form = this.modal.querySelector('form');
+    this.formContent = this.modal.querySelector('.modal__form-content');
+    this.successContent = this.modal.querySelector('.modal__success-content');
+    
+    console.log('Modal initialized with elements:', {
+      modal: this.modal,
+      form: this.form,
+      formContent: this.formContent,
+      successContent: this.successContent
+    });
     
     this.init();
   }
@@ -37,10 +47,23 @@ class Modal {
     this.container.addEventListener('click', (e) => {
       e.stopPropagation();
     });
+
+    // Handle form submission
+    if (this.form) {
+      this.form.addEventListener('submit', (e) => {
+        // Let the form submit normally
+        // The success state will be handled by the page reload
+        if (this.form.checkValidity()) {
+          this.showSuccess();
+        }
+      });
+    }
   }
 
   open() {
     this.modal.classList.add('is-open');
+    // Reset form state
+    this.resetState();
     // Focus on the first focusable element
     const focusableElements = this.modal.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
     if (focusableElements.length > 0) {
@@ -50,11 +73,37 @@ class Modal {
 
   close() {
     this.modal.classList.remove('is-open');
+    // Reset form state when closing
+    this.resetState();
+  }
+
+  showSuccess() {
+    console.log('Showing success state');
+    if (this.formContent && this.successContent) {
+      this.formContent.style.display = 'none';
+      this.successContent.style.display = 'block';
+    } else {
+      console.log('Missing elements for success state:', {
+        formContent: this.formContent,
+        successContent: this.successContent
+      });
+    }
+  }
+
+  resetState() {
+    if (this.formContent && this.successContent) {
+      this.formContent.style.display = 'block';
+      this.successContent.style.display = 'none';
+      if (this.form) {
+        this.form.reset();
+      }
+    }
   }
 }
 
 // Initialize modal when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
+  console.log('DOM loaded, initializing modal');
   const waitlistModal = new Modal('waitlist-modal');
 });
 
