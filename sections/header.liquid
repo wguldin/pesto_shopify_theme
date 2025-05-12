@@ -7,37 +7,38 @@
   endif
 -%}
 
-<header class="header-wrapper">
+<header class="header-wrapper" role="banner">
   <div class="header">
-    <nav class="nav">
+    <nav class="nav" role="navigation" aria-label="Main navigation">
       <ul class="nav__link-list">
-        <li class="nav__link"><a class="fancy-link" href="/pages/where-to-find-us">Where to Find Us</a></li>
-        <li class="nav__link"><a class="fancy-link" href="/#about-us">About Us</a></li>
-        <li class="nav__link"><a class="fancy-link" href="/#our-farm">Our farm</a></li>
-        <li class="nav__link"><a class="fancy-link" href="/#our-inspiration">Our inspiration</a></li>
+        <li class="nav__link"><a class="fancy-link" href="/pages/where-to-find-us" aria-label="Find our products">Where to Find Us</a></li>
+        <li class="nav__link"><a class="fancy-link" href="/#about-us" aria-label="Learn about us">About Us</a></li>
+        <li class="nav__link"><a class="fancy-link" href="/#our-farm" aria-label="Visit our farm">Our farm</a></li>
+        <li class="nav__link"><a class="fancy-link" href="/#our-inspiration" aria-label="Our inspiration story">Our inspiration</a></li>
       </ul>
       <button class="nav__hamburger" aria-label="Open menu" aria-controls="mobile-menu" aria-expanded="false">
-        <span class="nav__hamburger-bar"></span>
-        <span class="nav__hamburger-bar"></span>
-        <span class="nav__hamburger-bar"></span>
+        <span class="nav__hamburger-bar" aria-hidden="true"></span>
+        <span class="nav__hamburger-bar" aria-hidden="true"></span>
+        <span class="nav__hamburger-bar" aria-hidden="true"></span>
       </button>
-      <a class="nav__logo" href="/">
+      <a class="nav__logo" href="/" aria-label="{{ shop.name }} home">
         <img
           src="{{ 'logo.svg' | asset_url }}"
           width="{{ logo_width }}"
           height="{{ logo_height }}"
           alt="{{ shop.name }}"
+          loading="eager"
         >
       </a>
     </nav>
-    <div id="mobile-menu" class="mobile-menu" aria-hidden="true">
+    <div id="mobile-menu" class="mobile-menu" aria-hidden="true" role="navigation" aria-label="Mobile menu">
       <button class="mobile-menu__close" aria-label="Close menu">&times;</button>
       <ul class="mobile-menu__links">
-        <li><a href="/">Home</a></li>
-        <li><a href="/pages/where-to-find-us">Where to Find Us</a></li>
-        <li><a href="/#about-us">About Us</a></li>
-        <li><a href="/#our-farm">Our farm</a></li>
-        <li><a href="/#our-inspiration">Our inspiration</a></li>
+        <li><a href="/" aria-label="Home page">Home</a></li>
+        <li><a href="/pages/where-to-find-us" aria-label="Find our products">Where to Find Us</a></li>
+        <li><a href="/#about-us" aria-label="Learn about us">About Us</a></li>
+        <li><a href="/#our-farm" aria-label="Visit our farm">Our farm</a></li>
+        <li><a href="/#our-inspiration" aria-label="Our inspiration story">Our inspiration</a></li>
       </ul>
     </div>
   </div>

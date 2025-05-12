@@ -212,7 +212,7 @@
 .hero__cta {
   align-self: flex-start;
   margin-top: 1rem;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   padding: 1rem 2rem;
   margin-bottom: 0;
 }
@@ -269,6 +269,7 @@
   .hero__cta {
     align-self: center;
     width: auto;
+    font-size: 1.25rem;
   }
 
   .hero__image {

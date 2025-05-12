@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="theme-color" content="">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https: 'unsafe-inline' 'unsafe-eval'; img-src 'self' https: data:; font-src 'self' https: data:; script-src 'self' https: 'unsafe-inline' 'unsafe-eval'; style-src 'self' https: 'unsafe-inline'; connect-src 'self' https:; frame-src 'self' https:;">
     <link rel="canonical" href="{{ canonical_url }}">
     <link rel="preconnect" href="https://cdn.shopify.com" crossorigin>
 
@@ -63,9 +64,6 @@
     {{ 'base.css' | asset_url | stylesheet_tag }}
     {{ 'style.css' | asset_url | stylesheet_tag }}
 
-    <link rel="preconnect" href="https://cdn.fonts.net">
-    <link href="https://cdn.fonts.net/kit/ff0445d1-5e1d-4494-83cc-e457f3405385/ff0445d1-5e1d-4494-83cc-e457f3405385_enhanced.js" rel="stylesheet" />
-    <link href="https://cdn.fonts.net/kit/ff0445d1-5e1d-4494-83cc-e457f3405385/ff0445d1-5e1d-4494-83cc-e457f3405385_enhanced.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500..700&display=swap" rel="stylesheet">
 
     {%- unless settings.type_body_font.system? -%}
