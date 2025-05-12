@@ -46,5 +46,17 @@
         "default": "pesto_for_all"
       }
     ]
+  },
+  {
+    "name": "Maps",
+    "settings": [
+      {
+        "type": "text",
+        "id": "google_maps_api_key",
+        "label": "Google Maps API Key",
+        "default": "AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8",
+        "info": "Required for the embedded map on the Farmers Market section"
+      }
+    ]
   }
 ] 
